@@ -135,6 +135,8 @@
   .content-page {
     padding: 50px 60px;
     min-height: 297mm;
+    position: relative;
+    padding-bottom: 62px;
   }
 
   .page-header {
@@ -159,6 +161,22 @@
     font-weight: 700;
     color: var(--navy);
     letter-spacing: 1px;
+  }
+
+  .page-footer {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 16px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    font-weight: 400;
   }
 
   /* Section Titles */
@@ -729,22 +747,28 @@
     <div class="section-label">Carta ao Prefeito</div>
     <div class="section-title">Por que este projeto — e por que agora</div>
 
-    <div class="letter-greeting">Prezado Prefeito,</div>
+    <div class="letter-greeting">Prezado Prefeito Emiliano Braga,</div>
 
-    <p>Pedro Leopoldo está a 25 km do Aeroporto Internacional de Confins, no coração do Vetor Norte da RMBH — uma das zonas de maior crescimento urbano e industrial de Minas Gerais. No entanto, toda empresa da região que precisa importar ou exportar é obrigada a enviar suas cargas para Betim (30 km no trânsito) ou Juiz de Fora (180 km). Isso gera custos desnecessários, perda de competitividade e fuga de investimentos que poderiam estar no município.</p>
+    <p>Pedro Leopoldo ocupa uma posição geográfica singular no Vetor Norte da Região Metropolitana de Belo Horizonte. Localizado a apenas 25 km do Aeroporto Internacional de Confins, o município está inserido em uma das regiões de maior expansão urbana e industrial de Minas Gerais.</p>
 
-    <p>A criação de um <strong>Porto Seco (Estação Aduaneira de Interior)</strong> em Pedro Leopoldo resolve esse problema de forma estrutural. Não é apenas infraestrutura logística — é um instrumento de transformação econômica que atrai indústrias, gera empregos qualificados e posiciona o município como referência no cenário nacional.</p>
+    <p>Apesar dessa posição estratégica, empresas instaladas na região que precisam importar ou exportar ainda são obrigadas a enviar suas cargas para Betim (aproximadamente 30 km no trânsito) ou para Juiz de Fora (cerca de 180 km). Essa dinâmica gera custos adicionais, reduz competitividade e acaba deslocando investimentos que poderiam se estabelecer no próprio município.</p>
 
-    <p>A janela para agir é agora. A Instrução Normativa RFB 2.111/2022 modernizou as regras para novos Portos Secos. Confins segue expandindo sua capacidade de carga. O comércio exterior brasileiro registra recordes consecutivos. E os precedentes de <strong>Betim e Varginha</strong> demonstram que o modelo funciona em Minas Gerais.</p>
+    <p>A implantação de um Porto Seco (Estação Aduaneira de Interior) em Pedro Leopoldo representa uma solução estrutural para esse cenário. Não se trata apenas de infraestrutura logística, mas de um instrumento de transformação econômica capaz de atrair indústrias, gerar empregos qualificados e posicionar o município como um polo logístico estratégico no cenário nacional.</p>
 
-    <p>O que falta é o primeiro passo técnico: <strong>um documento sólido que fundamente a consulta formal à Receita Federal e dê segurança institucional para avançar</strong>. É exatamente isso que esta proposta entrega.</p>
+    <p>O momento para avançar nessa agenda é particularmente favorável. A Instrução Normativa RFB nº 2.111/2022 modernizou as regras para a criação de novos Portos Secos. Paralelamente, o Aeroporto Internacional de Confins segue ampliando sua capacidade de carga, enquanto o comércio exterior brasileiro registra sucessivos recordes de movimentação. Experiências bem-sucedidas em cidades como Betim e Varginha demonstram que o modelo é viável e consolidado em Minas Gerais.</p>
 
-    <p>Esta Síntese de Viabilidade Inicial (SVI) não é um estudo acadêmico. É um instrumento prático, desenhado para quem precisa tomar decisões com rapidez e responsabilidade. Em 45 dias e com investimento de R$ 32 mil, o município terá em mãos o documento necessário para dar o próximo passo concreto.</p>
+    <p>O passo inicial necessário é técnico: a elaboração de um documento consistente que permita fundamentar uma consulta formal à Receita Federal e ofereça segurança institucional para que o município avance na discussão.</p>
+
+    <p>É exatamente essa lacuna que esta proposta pretende preencher.</p>
+
+    <p>A Síntese de Viabilidade Inicial (SVI) apresentada neste material não é um estudo acadêmico, mas um instrumento objetivo, concebido para apoiar decisões públicas com rapidez, responsabilidade e base técnica. No prazo de até 45 dias e com investimento estimado de R$ 38 mil, o município poderá dispor do documento necessário para dar o próximo passo concreto nessa agenda estratégica.</p>
 
     <div class="letter-sign">
+      <div class="role" style="margin-bottom: 8px;">Atenciosamente,</div>
       <div class="name">Alencar Silva</div>
-      <div class="role">Engenheiro Civil | Global MBA | Gestão de Grandes Projetos &amp; Contratos</div>
-      <div class="role" style="margin-top: 4px;">linkedin.com/in/alencarsilva</div>
+      <div class="role">Engenheiro Civil</div>
+      <div class="role">Global Business MBA – Gestão de Grandes Projetos e Contratos</div>
+      <div class="role">Consultor em Estratégia e Infraestrutura</div>
     </div>
   </div>
 </div>
@@ -1339,5 +1363,13 @@
   </div>
 </div>
 
+<script>
+  document.querySelectorAll('.content-page').forEach((page, index) => {
+    const footer = document.createElement('div');
+    footer.className = 'page-footer';
+    footer.innerHTML = '<span>linkedin.com/in/alencarsilva</span><span>' + (index + 2) + '</span>';
+    page.appendChild(footer);
+  });
+</script>
 </body>
 </html>
