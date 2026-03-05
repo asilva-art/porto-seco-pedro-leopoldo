@@ -440,6 +440,20 @@
     color: #c0392b;
   }
 
+  .check-list .item-main {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .check-list .item-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
   /* Phase blocks */
   .phase-block {
     margin: 20px 0;
@@ -878,24 +892,52 @@
     <div class="two-col" style="margin-top: 10px;">
       <div>
         <ul class="check-list">
-          <li>Diagnóstico de oportunidade logística</li>
-          <li>Mapeamento de potencial de carga (CNAE)</li>
-          <li>Benchmarking com Betim, Juiz de Fora e Varginha</li>
-          <li>Levantamento de terrenos candidatos</li>
-          <li>Esboço de implantação conceitual</li>
-          <li>Requisitos de infraestrutura (dimensionamento)</li>
-          <li>Análise regulatória completa (IN 2.111/2022)</li>
+          <li><span class="item-main">Diagnóstico logístico regional</span></li>
+          <li><span class="item-main">Mapeamento de potencial de carga (CNAE)</span></li>
+          <li>
+            <span class="item-main">Benchmarking com Betim, Juiz de Fora e Varginha</span>
+            <span class="item-note">(baseado em dados públicos e fontes institucionais disponíveis)</span>
+          </li>
+          <li>
+            <span class="item-main">Identificação preliminar de áreas candidatas</span>
+            <span class="item-note">(visitas in loco nos dois locais sugeridos pela prefeitura para avaliação visual de potencial, gargalos e oportunidades)</span>
+          </li>
+          <li>
+            <span class="item-main">Esboço conceitual de implantação</span>
+            <span class="item-note">(desenvolvido a partir de imagens de satélite e bases públicas disponíveis)</span>
+          </li>
+          <li>
+            <span class="item-main">Dimensionamento preliminar de infraestrutura</span>
+            <span class="item-note">(nível conceitual / triagem - Feasibility - com baixa precisão, adequado para avaliação inicial de viabilidade)</span>
+          </li>
         </ul>
       </div>
       <div>
         <ul class="check-list">
-          <li>Conformidade regulatória detalhada</li>
-          <li>Estrutura Analítica do Projeto (EAP/WBS)</li>
-          <li>Fontes de financiamento (BNDES, CAF, BID)</li>
-          <li>Roadmap institucional para licitação RFB</li>
-          <li>Estimativas de CAPEX (3 cenários)</li>
-          <li>Executive Summary de 1 página</li>
-          <li>Entrega em PDF + Word editável</li>
+          <li>
+            <span class="item-main">Análise regulatória do modelo de Porto Seco</span>
+            <span class="item-note">(com base na IN RFB nº 2.111/2022 e normas correlatas)</span>
+          </li>
+          <li>
+            <span class="item-main">Estrutura Analítica do Projeto (EAP/WBS - Classe 5)</span>
+            <span class="item-note">(estrutura simplificada em blocos funcionais, adequada para estimativas paramétricas iniciais)</span>
+          </li>
+          <li>
+            <span class="item-main">Identificação de potenciais fontes de financiamento</span>
+            <span class="item-note">(BNDES, CAF, BID e programas correlatos)</span>
+          </li>
+          <li><span class="item-main">Roadmap institucional para consulta e eventual licitação junto à Receita Federal</span></li>
+          <li>
+            <span class="item-main">Estimativa preliminar de CAPEX</span>
+            <span class="item-note">(ordem de grandeza baseada em blocos funcionais e métricas paramétricas - R$/m² - voltada apenas para avaliação de viabilidade inicial)</span>
+          </li>
+          <li>
+            <span class="item-main">Executive Summary de 1 página</span>
+            <span class="item-note">(visão estratégica para tomada de decisão)</span>
+          </li>
+          <li>
+            <span class="item-main">Entrega do estudo em PDF e Word editável, incluindo referências e fontes de pesquisa utilizadas</span>
+          </li>
         </ul>
       </div>
     </div>
