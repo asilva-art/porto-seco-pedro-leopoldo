@@ -374,10 +374,49 @@
     min-width: 120px;
   }
 
+  .exec-flow-step.future {
+    background: #f7f7f7;
+    border-color: var(--border);
+    color: var(--text-light);
+  }
+
   .exec-flow-arrow {
     color: var(--accent);
     font-size: 18px;
     font-weight: 700;
+  }
+
+  .exec-legend {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+
+  .exec-legend-item {
+    font-size: 10px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .exec-legend-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .exec-legend-dot.scope {
+    background: var(--accent);
+  }
+
+  .exec-legend-dot.future {
+    background: #b7b7b7;
   }
 
   /* Tables */
@@ -950,7 +989,11 @@
       <div class="exec-flow-arrow">&rarr;</div>
       <div class="exec-flow-step">Consulta à<br>Receita Federal</div>
       <div class="exec-flow-arrow">&rarr;</div>
-      <div class="exec-flow-step">EVTE +<br>Licitação</div>
+      <div class="exec-flow-step future">EVTE +<br>Licitação</div>
+    </div>
+    <div class="exec-legend">
+      <span class="exec-legend-item"><span class="exec-legend-dot scope"></span>Escopo desta proposta</span>
+      <span class="exec-legend-item"><span class="exec-legend-dot future"></span>Demanda futura (fora do escopo)</span>
     </div>
   </div>
 </div>
@@ -1195,7 +1238,7 @@
       </div>
       <div class="profile-highlight">
         <div class="icon">5</div>
-        <div class="text"><strong>Honestidade técnica</strong> — cenários realistas (payback de 5–7 anos, croquis conceituais úteis) em vez de projeções otimistas irrealistas.</div>
+        <div class="text"><strong>Honestidade técnica</strong> — premissas conservadoras e verificáveis: payback de 5–7 anos, croquis conceituais úteis e limites explícitos de precisão, sem inflar demanda ou retorno para viabilizar decisão política.</div>
       </div>
     </div>
   </div>
@@ -1224,10 +1267,10 @@
         <tr><th>Fase</th><th>Escopo</th><th>Prazo</th><th>Valor</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Fase 1</strong></td><td>Pesquisa, diagnóstico e benchmarking</td><td>Dias 1 a 15</td><td>R$ 9.500</td></tr>
-        <tr><td><strong>Fase 2</strong></td><td>Estruturação técnica preliminar</td><td>Dias 16 a 27</td><td>R$ 9.500</td></tr>
-        <tr><td><strong>Fase 3</strong></td><td>Consolidação, EAP/WBS e roadmap</td><td>Dias 28 a 38</td><td>R$ 9.500</td></tr>
-        <tr><td><strong>Fase 4</strong></td><td>Finalização, summary e entrega</td><td>Dias 39 a 45</td><td>R$ 9.500</td></tr>
+        <tr><td><strong>Fase 1</strong></td><td>Pesquisa, diagnóstico e benchmarking</td><td>Dias 1 a 15</td><td>R$ 12.000</td></tr>
+        <tr><td><strong>Fase 2</strong></td><td>Estruturação técnica preliminar</td><td>Dias 16 a 27</td><td>R$ 11.000</td></tr>
+        <tr><td><strong>Fase 3</strong></td><td>Consolidação, EAP/WBS e roadmap</td><td>Dias 28 a 38</td><td>R$ 10.000</td></tr>
+        <tr><td><strong>Fase 4</strong></td><td>Finalização, summary e entrega</td><td>Dias 39 a 45</td><td>R$ 5.000</td></tr>
         <tr class="table-highlight"><td></td><td><strong>Total</strong></td><td><strong>45 dias</strong></td><td><strong>R$ 38.000</strong></td></tr>
       </tbody>
     </table>
@@ -1298,18 +1341,43 @@
     <div class="section-label">Seção 7</div>
     <div class="section-title">Próximas Fases (Serviços Complementares)</div>
 
-    <p>Após a entrega da SVI, o projeto poderá demandar os seguintes serviços — <strong>não inclusos nesta proposta</strong>:</p>
+    <p>Após a entrega da SVI, recomenda-se o seguinte <strong>sequenciamento de amadurecimento do projeto</strong> — etapas futuras, fora desta proposta:</p>
+    <p class="small" style="margin-top: -4px;">Nota: o <strong>EVTE</strong> (Art. 9º da IN RFB nº 2.111/2022) está contemplado como etapa futura deste sequenciamento.</p>
 
-    <table>
-      <thead><tr><th>Serviço</th><th>Investimento Est.</th><th>Prazo Est.</th></tr></thead>
-      <tbody>
-        <tr><td><strong>EVTE Profissional</strong> (Art. 9º IN 2.111/2022)</td><td>R$ 80–150 mil</td><td>4–6 meses</td></tr>
-        <tr><td><strong>Incentivos Municipais</strong> (ISS, IPTU, doação de área)</td><td>R$ 8–12 mil</td><td>2–3 meses</td></tr>
-        <tr><td><strong>Coordenação Licitação RFB</strong></td><td>R$ 10–15 mil</td><td>4–6 meses</td></tr>
-        <tr><td><strong>Projeto Executivo</strong> (arquitetura + engenharia)</td><td>R$ 50–80 mil</td><td>6–8 meses</td></tr>
-        <tr><td><strong>Captação BNDES/CAF</strong></td><td>R$ 15–25 mil</td><td>6–12 meses</td></tr>
-      </tbody>
-    </table>
+    <div class="phase-block">
+      <div class="phase-tag">Fase 1</div>
+      <div class="phase-title">Planejamento e Viabilidade (FEL 1 / ETP)</div>
+      <p class="small"><strong>AACE:</strong> Classe 5. Foco em viabilidade econômica e seleção de alternativas.</p>
+      <p class="small"><strong>TCU:</strong> Estudo Técnico Preliminar (ETP). Define se a solução atende ao interesse público.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 2</div>
+      <div class="phase-title">Estudo de Seleção (FEL 2 / Anteprojeto)</div>
+      <p class="small"><strong>AACE:</strong> Classe 4. Definição da opção técnica escolhida (escopo preliminar).</p>
+      <p class="small"><strong>TCU:</strong> Anteprojeto. Usado em licitações de Contratação Integrada para definir o objeto.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 3</div>
+      <div class="phase-title">Definição e Licitação (FEL 3 / Projeto Básico)</div>
+      <p class="small"><strong>AACE:</strong> Classe 3. Base para autorização de investimento (sanção).</p>
+      <p class="small"><strong>TCU:</strong> Projeto Básico. Nível obrigatório para licitação comum, com precisão para evitar aditivos.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 4</div>
+      <div class="phase-title">Detalhamento Final (Projeto Executivo)</div>
+      <p class="small"><strong>AACE:</strong> Classe 2 / 1. Emissão de documentos para construção e montagem.</p>
+      <p class="small"><strong>TCU:</strong> Projeto Executivo. Detalhamento completo dos elementos necessários ao início da obra.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 5</div>
+      <div class="phase-title">Execução e Encerramento</div>
+      <p class="small"><strong>AACE:</strong> Controle de custos e medição de desvios.</p>
+      <p class="small"><strong>TCU:</strong> Fiscalização da entrega conforme o edital e documentação As-Built.</p>
+    </div>
 
     <hr class="divider">
 
