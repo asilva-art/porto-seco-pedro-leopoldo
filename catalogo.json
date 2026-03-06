@@ -16,5 +16,14 @@
     "data": "2026-03-06",
     "link_final": "https://avasconsult.com.br/profissional/propostas/cliente-x/",
     "prioridade": "média"
+  },
+  {
+    "titulo": "Painel de Exames de Sangue - Alencar",
+    "categoria": "pessoal/compilacoes",
+    "slug": "dashboard-exames-saude",
+    "tipo": "pessoal",
+    "data": "2026-03-06",
+    "link_final": "https://avasconsult.com.br/pessoal/compilacoes/dashboard-exames-saude/",
+    "prioridade": "alta"
   }
 ]
