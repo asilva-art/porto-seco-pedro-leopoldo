@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Técnico-Comercial — Porto Seco Pedro Leopoldo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --navy: #0F2B46;
+    --navy-light: #1A3D5C;
+    --accent: #2E86AB;
+    --accent-light: #E8F4F8;
+    --gold: #C8A951;
+    --text: #2D2D2D;
+    --text-light: #5A5A5A;
+    --bg: #FFFFFF;
+    --border: #E0E0E0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #f5f5f5;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none !important; margin: 0 !important; page-break-after: always; }
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  /* ===== CAPA ===== */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 297mm;
+    padding: 0;
+  }
+
+  .cover-top {
+    background: var(--navy);
+    color: white;
+    padding: 80px 60px 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cover-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .cover-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .cover-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    max-width: 520px;
+    margin-top: 10px;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 30px 0;
+  }
+
+  .cover-bottom {
+    padding: 36px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .cover-meta {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.8;
+    flex: 1;
+  }
+
+  .cover-meta strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .cover-badge {
+    text-align: right;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 600;
+    border: 2px solid var(--navy);
+    padding: 6px 10px;
+    margin-left: 12px;
+    flex: 0 0 auto;
+  }
+
+  .cover-meta .destinatario-line {
+    white-space: nowrap;
+  }
+
+  /* ===== CONTENT PAGES ===== */
+  .content-page {
+    padding: 50px 60px;
+    min-height: 297mm;
+    position: relative;
+    padding-bottom: 62px;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 35px;
+  }
+
+  .page-header-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .page-header-logo {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 1px;
+  }
+
+  .page-footer {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 16px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  /* Section Titles */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 25px;
+    line-height: 1.3;
+  }
+
+  .section-title-sm {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 18px;
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .text-light { color: var(--text-light); }
+
+  /* Intro Letter */
+  .letter-greeting {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .letter-sign {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  .letter-sign .name {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 14px;
+  }
+
+  .letter-sign .role {
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  /* Consultant Profile */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 25px 0;
+  }
+
+  .profile-stat {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 15px 18px;
+  }
+
+  .profile-stat .number {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy);
+  }
+
+  .profile-stat .label {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 3px;
+  }
+
+  .profile-highlights {
+    margin: 20px 0;
+  }
+
+  .profile-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .profile-highlight .icon {
+    width: 24px;
+    height: 24px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .profile-highlight .text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .profile-highlight .text strong {
+    color: var(--navy);
+  }
+
+  /* Executive Summary Boxes */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 20px 0;
+  }
+
+  .exec-box {
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .exec-box.highlight {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+  }
+
+  .exec-box.highlight .exec-box-label { color: var(--gold); }
+  .exec-box.highlight .exec-box-value { color: white; }
+  .exec-box.highlight .exec-box-desc { color: rgba(255,255,255,0.7); }
+
+  .exec-box-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .exec-box-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .exec-box-desc {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  .exec-flow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+  }
+
+  .exec-flow-step {
+    background: var(--accent-light);
+    border: 1px solid #cde8f0;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .exec-flow-step.future {
+    background: #f7f7f7;
+    border-color: var(--border);
+    color: var(--text-light);
+  }
+
+  .exec-flow-arrow {
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .exec-legend {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+
+  .exec-legend-item {
+    font-size: 10px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .exec-legend-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .exec-legend-dot.scope {
+    background: var(--accent);
+  }
+
+  .exec-legend-dot.future {
+    background: #b7b7b7;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 12px;
+  }
+
+  thead th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  tbody tr:nth-child(even) { background: #fafafa; }
+
+  .table-highlight td {
+    background: var(--accent-light) !important;
+    font-weight: 600;
+  }
+
+  /* Lists */
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .check-list li {
+    font-size: 13px;
+    padding: 6px 0 6px 28px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .check-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .check-list.excluded li::before {
+    content: "\2717";
+    color: #c0392b;
+  }
+
+  .check-list .item-main {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .check-list .item-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* Phase blocks */
+  .phase-block {
+    margin: 20px 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+
+  .phase-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .phase-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 4px 0 8px;
+  }
+
+  /* Investment highlight */
+  .investment-box {
+    background: var(--navy);
+    color: white;
+    padding: 30px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .investment-box .amount {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 5px;
+  }
+
+  .investment-box .desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .investment-box .rate {
+    font-size: 14px;
+    color: var(--gold);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  /* Payment */
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .payment-card {
+    border: 2px solid var(--border);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .payment-card .label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  .payment-card .value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 6px 0;
+  }
+
+  .payment-card .when {
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  /* Timeline */
+  .timeline { margin: 15px 0; }
+
+  .timeline-item {
+    display: flex;
+    gap: 15px;
+  }
+
+  .timeline-dot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .timeline-line {
+    width: 2px;
+    flex: 1;
+    background: var(--border);
+  }
+
+  .timeline-content {
+    padding-bottom: 20px;
+    flex: 1;
+  }
+
+  .timeline-week {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    background: var(--accent-light);
+    border: 2px solid var(--accent);
+    padding: 25px;
+    margin: 20px 0;
+  }
+
+  .cta-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .cta-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: cta;
+  }
+
+  .cta-steps li {
+    font-size: 13px;
+    padding: 6px 0 6px 32px;
+    position: relative;
+    counter-increment: cta;
+  }
+
+  .cta-steps li::before {
+    content: counter(cta);
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* Back Cover */
+  .backcover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 297mm;
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 60px;
+  }
+
+  .backcover-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .backcover-role {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 40px;
+  }
+
+  .backcover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 40px;
+  }
+
+  .backcover-contact {
+    font-size: 14px;
+    line-height: 2.2;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .backcover-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .backcover-cta {
+    margin-top: 50px;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .backcover-validity {
+    margin-top: 30px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Utilities */
+  .small { font-size: 11px; color: var(--text-light); }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 25px 0; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .callout {
+    background: #FFF9E6;
+    border-left: 3px solid var(--gold);
+    padding: 15px 18px;
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .scope-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+
+  .scope-tag.in { background: #E8F8F0; color: #1B7A4A; }
+  .scope-tag.out { background: #FDE8E8; color: #c0392b; }
+</style>
+</head>
+<body>
+
+<!-- ==================== CAPA ==================== -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-top">
+      <div class="cover-tag">Proposta Técnico-Comercial</div>
+      <div class="cover-divider"></div>
+      <div class="cover-title">Síntese de Viabilidade Inicial<br>para Porto Seco em<br>Pedro Leopoldo/MG</div>
+      <div class="cover-subtitle">Estruturação técnica da ideia em formato de projeto, organizando análises, dados e caminhos institucionais para viabilizar decisões estratégicas.</div>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-meta">
+        <strong>Proponente:</strong> Alencar Silva, Consultor em Estratégia, Infraestrutura e Engenharia Contratual<br>
+        <span class="destinatario-line"><strong>Destinatário:</strong> Ao Excelentíssimo Senhor Emiliano Braga, Prefeito Municipal de Pedro Leopoldo – MG</span><br>
+        <strong>Prazo de entrega:</strong> 45 dias corridos<br>
+        <strong>Investimento:</strong> R$ 38.000,00
+      </div>
+      <div class="cover-badge">MARÇO 2026<br>VERSÃO 1.0</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== INTRODUÇÃO / CARTA ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Introdução</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Carta ao Prefeito</div>
+    <div class="section-title">Por que este projeto — e por que agora</div>
+
+    <div class="letter-greeting">Prezado Prefeito Emiliano Braga,</div>
+
+    <p>Pedro Leopoldo ocupa uma posição geográfica singular no Vetor Norte da Região Metropolitana de Belo Horizonte. Localizado a apenas 25 km do Aeroporto Internacional de Confins, o município está inserido em uma das regiões de maior expansão urbana e industrial de Minas Gerais.</p>
+
+    <p>Apesar dessa posição estratégica, empresas instaladas na região que precisam importar ou exportar ainda são obrigadas a enviar suas cargas para Betim (aproximadamente 30 km no trânsito) ou para Juiz de Fora (cerca de 180 km). Essa dinâmica gera custos adicionais, reduz a competitividade e acaba deslocando investimentos que poderiam se estabelecer no próprio município.</p>
+
+    <p>A implantação de um Porto Seco (Estação Aduaneira de Interior) em Pedro Leopoldo representa uma solução estrutural para esse cenário. Não se trata apenas de infraestrutura logística, mas de um instrumento de transformação econômica capaz de atrair indústrias, gerar empregos qualificados e posicionar o município como um polo logístico estratégico no cenário nacional.</p>
+
+    <p>O momento para avançar nessa agenda é particularmente favorável. A Instrução Normativa RFB nº 2.111/2022 modernizou as regras para a criação de novos Portos Secos. Paralelamente, o Aeroporto Internacional de Confins segue ampliando sua capacidade de carga, enquanto o comércio exterior brasileiro registra sucessivos recordes de movimentação. Experiências bem-sucedidas em cidades como Betim e Varginha demonstram que o modelo é viável e consolidado em Minas Gerais.</p>
+
+    <p>O passo inicial necessário é técnico: a elaboração de um documento consistente que permita fundamentar uma consulta formal à Receita Federal e ofereça segurança institucional para que o município avance na discussão.</p>
+
+    <p>É exatamente essa lacuna que esta proposta pretende preencher.</p>
+
+    <p>A Síntese de Viabilidade Inicial (SVI) apresentada neste material não é um estudo acadêmico, mas um instrumento objetivo, concebido para apoiar decisões públicas com rapidez, responsabilidade e base técnica. No prazo de até 45 dias e com investimento estimado de R$ 38 mil, o município poderá dispor do documento necessário para dar o próximo passo concreto nessa agenda estratégica.</p>
+
+    <div class="letter-sign">
+      <div class="role" style="margin-bottom: 8px;">Atenciosamente,</div>
+      <div class="name">Alencar Silva</div>
+      <div class="role">Engenheiro Civil</div>
+      <div class="role">Global Business MBA – Gestão de Grandes Projetos e Contratos</div>
+      <div class="role">Consultor em Estratégia e Infraestrutura</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== O CONSULTOR ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">O Consultor</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Quem conduzirá este trabalho</div>
+    <div class="section-title">Alencar Silva</div>
+
+    <p>Engenheiro Civil pela UFMG, com Global MBA pelo IBMEC e Loyola University Chicago, com <strong>18 anos de experiência em infraestrutura, contratos e projetos complexos</strong> — sendo 15 deles dedicados à mineradora Vale S.A.</p>
+
+    <div class="profile-grid">
+      <div class="profile-stat">
+        <div class="number">US$ 10 bi+</div>
+        <div class="label">em megaprojetos internacionais gerenciados</div>
+      </div>
+      <div class="profile-stat">
+        <div class="number">US$ 7,5 bi</div>
+        <div class="label">em portfólios de contratos sob gestão</div>
+      </div>
+      <div class="profile-stat">
+        <div class="number">2.500+</div>
+        <div class="label">profissionais coordenados simultaneamente</div>
+      </div>
+      <div class="profile-stat">
+        <div class="number">18 anos</div>
+        <div class="label">de atuação em infraestrutura e contratos</div>
+      </div>
+    </div>
+
+    <h3>Experiência diretamente relevante para este projeto</h3>
+
+    <div class="profile-highlights">
+      <div class="profile-highlight">
+        <div class="icon">1</div>
+        <div class="text"><strong>Corredor Logístico de Nacala</strong> (Moçambique–Malauí): PMO Estratégico em projeto integrado de mina de carvão, ferrovia de 912 km e porto marítimo, com CapEx de US$ 4,4 bilhões.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">2</div>
+        <div class="text"><strong>Concessão Ferrovia + Porto no Nordeste</strong>: Modelagem técnico-comercial para viabilizar a concessão de 900 km de ferrovia integrada a ativo portuário, com foco em atração de investidores.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">3</div>
+        <div class="text"><strong>Gestão de Crise Pós-Brumadinho</strong> (Vale S.A.): Estruturação completa da área de gestão de contratos e liderança de equipes multidisciplinares em cenário de alta complexidade e urgência.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">4</div>
+        <div class="text"><strong>Gestão de R$ 7 bilhões em obrigações financeiras</strong> na Diretoria de Reparação da Vale, com coordenação de 220 contratos simultâneos e operação logística de grande escala.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">5</div>
+        <div class="text"><strong>Advisory Estratégico ativo</strong> junto a CEOs, conselhos de administração e decisores governamentais, com foco em viabilidade, estruturação contratual e mitigação de riscos.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Por que isso importa para Pedro Leopoldo?</strong> A experiência em corredores logísticos internacionais, modelagem de concessões de infraestrutura e articulação institucional em projetos bilionários é exatamente o tipo de expertise necessária para estruturar um Porto Seco com solidez técnica e visão estratégica.
+    </div>
+
+    <p class="small" style="margin-top: 15px;">Perfil completo: <strong>linkedin.com/in/alencarsilva</strong></p>
+  </div>
+</div>
+
+<!-- ==================== RESUMO EXECUTIVO ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Resumo Executivo</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Visão geral para tomada de decisão</div>
+    <div class="section-title">Em uma página</div>
+
+    <div class="exec-grid">
+      <div class="exec-box">
+        <div class="exec-box-label">O Problema</div>
+        <div class="exec-box-value" style="font-size: 16px;">Sem recinto alfandegado</div>
+        <div class="exec-box-desc">O Vetor Norte da RMBH não possui um recinto alfandegado de uso público. Empresas dependem de Betim (30 km), Varginha ou Juiz de Fora (180 km), gerando custos adicionais e perda de competitividade.</div>
+      </div>
+      <div class="exec-box">
+        <div class="exec-box-label">A Oportunidade</div>
+        <div class="exec-box-value" style="font-size: 16px;">Hub logístico estratégico</div>
+        <div class="exec-box-desc">Pedro Leopoldo: a 25 km de Confins, acesso direto às BRs 040 e 381, polo industrial diversificado. IN RFB 2.111/2022 modernizou as regras. Precedentes de sucesso em MG.</div>
+      </div>
+      <div class="exec-box highlight">
+        <div class="exec-box-label">A Solução Proposta</div>
+        <div class="exec-box-value" style="font-size: 16px;">Síntese de Viabilidade Inicial</div>
+        <div class="exec-box-desc">Documento técnico de 25–30 páginas que fundamenta a consulta à Receita Federal, atrai investidores e subsidia o EVTE profissional.</div>
+      </div>
+      <div class="exec-box highlight">
+        <div class="exec-box-label">Investimento</div>
+        <div class="exec-box-value">R$ 38.000</div>
+        <div class="exec-box-desc">45 dias | Pagamento em 2 parcelas de R$ 19.000 (assinatura + entrega).</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 30px;">O que será entregue</h3>
+    <p style="margin-bottom: 5px;">Um documento completo contendo:</p>
+
+    <div class="two-col" style="margin-top: 10px;">
+      <div>
+        <ul class="check-list">
+          <li><span class="item-main">Diagnóstico logístico regional</span></li>
+          <li><span class="item-main">Mapeamento de potencial de carga (CNAE)</span></li>
+          <li>
+            <span class="item-main">Benchmarking com Betim, Juiz de Fora e Varginha</span>
+            <span class="item-note">(baseado em dados públicos e fontes institucionais disponíveis)</span>
+          </li>
+          <li>
+            <span class="item-main">Identificação preliminar de áreas candidatas</span>
+            <span class="item-note">(visitas in loco nos dois locais sugeridos pela prefeitura para avaliação visual de potencial, gargalos e oportunidades)</span>
+          </li>
+          <li>
+            <span class="item-main">Esboço conceitual de implantação</span>
+            <span class="item-note">(desenvolvido a partir de imagens de satélite e bases públicas disponíveis)</span>
+          </li>
+          <li>
+            <span class="item-main">Dimensionamento preliminar de infraestrutura</span>
+            <span class="item-note">(nível conceitual/triagem — feasibility — com baixa precisão, adequado à avaliação inicial de viabilidade)</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>
+            <span class="item-main">Análise regulatória do modelo de Porto Seco</span>
+            <span class="item-note">(com base na IN RFB nº 2.111/2022 e normas correlatas)</span>
+          </li>
+          <li>
+            <span class="item-main">Estrutura Analítica do Projeto (EAP/WBS - Classe 5)</span>
+            <span class="item-note">(estrutura simplificada em blocos funcionais, adequada para estimativas paramétricas iniciais)</span>
+          </li>
+          <li>
+            <span class="item-main">Identificação de potenciais fontes de financiamento</span>
+            <span class="item-note">(BNDES, CAF, BID e programas correlatos)</span>
+          </li>
+          <li><span class="item-main">Roadmap institucional para consulta e eventual licitação junto à Receita Federal</span></li>
+          <li>
+            <span class="item-main">Estimativa preliminar de CAPEX</span>
+            <span class="item-note">(ordem de grandeza baseada em blocos funcionais e métricas paramétricas - R$/m² - voltada apenas para avaliação de viabilidade inicial)</span>
+          </li>
+          <li>
+            <span class="item-main">Executive Summary de 1 página</span>
+            <span class="item-note">(visão estratégica para tomada de decisão)</span>
+          </li>
+          <li>
+            <span class="item-main">Entrega do estudo em PDF e Word editável, incluindo referências e fontes de pesquisa utilizadas</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 25px;">Caminho proposto</h3>
+    <div class="exec-flow">
+      <div class="exec-flow-step">Assinatura do<br>Contrato</div>
+      <div class="exec-flow-arrow">&rarr;</div>
+      <div class="exec-flow-step">SVI<br>(45 dias)</div>
+      <div class="exec-flow-arrow">&rarr;</div>
+      <div class="exec-flow-step future">Consulta à<br>Receita Federal</div>
+      <div class="exec-flow-arrow">&rarr;</div>
+      <div class="exec-flow-step future">EVTE +<br>Licitação</div>
+    </div>
+    <div class="exec-legend">
+      <span class="exec-legend-item"><span class="exec-legend-dot scope"></span>Escopo desta proposta</span>
+      <span class="exec-legend-item"><span class="exec-legend-dot future"></span>Demanda futura (fora do escopo)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTEXTO E OPORTUNIDADE ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 1</div>
+    <div class="section-title">Contexto e Oportunidade</div>
+
+    <div class="section-title-sm">1.1 Posição Logística Estratégica</div>
+    <p>Pedro Leopoldo está no coração de um vetor de desenvolvimento logístico crucial para Minas Gerais, com vantagens competitivas claras para a implantação de um Porto Seco:</p>
+
+    <table>
+      <thead>
+        <tr><th>Vetor</th><th>Característica</th><th>Impacto para o Projeto</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Aéreo</strong></td>
+          <td>25 km do Aeroporto de Confins (CNF) — capacidade de 70 mil t/ano, com 17 mil t movimentadas em 2024.</td>
+          <td>Fluxo de cargas de alto valor agregado, perecíveis e componentes importados.</td>
+        </tr>
+        <tr>
+          <td><strong>Rodoviário</strong></td>
+          <td>Acesso direto às BRs 040 (BH–Brasília) e 381 (BH–São Paulo).</td>
+          <td>Distribuição eficiente na RMBH e conexão com corredores nacionais.</td>
+        </tr>
+        <tr>
+          <td><strong>Industrial</strong></td>
+          <td>Polo industrial diversificado: automotivo (Betim), cimenteiro (Pedro Leopoldo).</td>
+          <td>Demanda constante por autopeças, insumos e produtos industrializados.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title-sm">1.2 A Lacuna Operacional</div>
+    <p>O Vetor Norte da RMBH <strong>não possui um recinto alfandegado de uso público</strong>. Empresas que necessitam de serviços aduaneiros são forçadas a:</p>
+    <ul class="check-list excluded">
+      <li>Transportar cargas até Betim (~30 km), enfrentando tráfego intenso e custos elevados.</li>
+      <li>Utilizar o Terminal de Confins, limitado para operações de grande volume ou outros modais.</li>
+      <li>Recorrer a Juiz de Fora (180 km), o que é operacionalmente inviável para a maioria das empresas.</li>
+    </ul>
+    <p>Essa lacuna impacta diretamente a competitividade das empresas locais e a atração de novos investimentos para o município.</p>
+
+    <div class="section-title-sm">1.3 Janela de Oportunidade</div>
+    <p>A conjuntura atual é favorável ao projeto por quatro razões convergentes:</p>
+    <ul class="check-list">
+      <li><strong>Regulamentação atualizada:</strong> IN RFB 2.111/2022 modernizou e simplificou as regras para novos Portos Secos.</li>
+      <li><strong>Expansão do Vetor Norte:</strong> crescimento urbano e industrial contínuo, com demanda crescente por infraestrutura logística.</li>
+      <li><strong>Comércio exterior aquecido:</strong> Brasil registrando recordes, impulsionando a necessidade de infraestrutura aduaneira.</li>
+      <li><strong>Precedentes de sucesso:</strong> Betim e Varginha demonstram a viabilidade do modelo em Minas Gerais.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== OBJETIVO E PRODUTO ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 2</div>
+    <div class="section-title">Objetivo e Produto Final</div>
+
+    <p>O objetivo desta consultoria é estruturar uma <strong>Síntese de Viabilidade Inicial (SVI)</strong> que demonstre a viabilidade técnica, regulatória, econômica e comercial para a instalação de um Porto Seco em Pedro Leopoldo. A SVI servirá para:</p>
+
+    <ul class="check-list">
+      <li><strong>Fundamentar a consulta formal à Receita Federal</strong> (SRRF-06).</li>
+      <li><strong>Organizar a base técnica para decisão institucional</strong> da Prefeitura de Pedro Leopoldo.</li>
+      <li><strong>Estruturar diretrizes preliminares</strong> para implantação e viabilização do projeto.</li>
+      <li><strong>Preparar o caminho técnico</strong> para eventual EVTE e etapas subsequentes.</li>
+    </ul>
+
+    <h3>Produto Entregue</h3>
+    <p>Documento técnico de <strong>25–30 páginas</strong>, em PDF e Word editável, com 13 componentes:</p>
+
+    <table>
+      <thead>
+        <tr><th>#</th><th>Componente</th><th>Descrição</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><strong>Diagnóstico Logístico Regional</strong></td><td>Leitura técnica do contexto regional e da lacuna alfandegária no Vetor Norte.</td></tr>
+        <tr><td>2</td><td><strong>Mapeamento de Potencial de Carga (CNAE)</strong></td><td>Identificação preliminar de setores com potencial de geração de fluxo aduaneiro.</td></tr>
+        <tr><td>3</td><td><strong>Benchmarking Estratégico</strong></td><td>Comparativo com Betim, Juiz de Fora e Varginha com base em dados públicos.</td></tr>
+        <tr><td>4</td><td><strong>Identificação Preliminar de Áreas Candidatas</strong></td><td>Avaliação visual in loco dos 2 locais sugeridos pela Prefeitura.</td></tr>
+        <tr><td>5</td><td><strong>Esboço Conceitual de Implantação</strong></td><td>Proposta conceitual construída sobre imagens de satélite e bases públicas.</td></tr>
+        <tr><td>6</td><td><strong>Dimensionamento Preliminar de Infraestrutura</strong></td><td>Triagem em nível conceitual, com baixa precisão, para avaliação de viabilidade inicial.</td></tr>
+        <tr><td>7</td><td><strong>Análise Regulatória do Modelo de Porto Seco</strong></td><td>Leitura técnica da IN RFB nº 2.111/2022 e normas correlatas.</td></tr>
+        <tr><td>8</td><td><strong>EAP/WBS — Classe 5</strong></td><td>Estrutura simplificada por blocos funcionais para estimativas paramétricas iniciais.</td></tr>
+        <tr><td>9</td><td><strong>Potenciais Fontes de Financiamento</strong></td><td>Mapa preliminar de opções como BNDES, CAF, BID e programas correlatos.</td></tr>
+        <tr><td>10</td><td><strong>Roadmap Institucional</strong></td><td>Sequenciamento técnico para consulta e eventual licitação junto à Receita Federal.</td></tr>
+        <tr><td>11</td><td><strong>Estimativa Preliminar de CAPEX</strong></td><td>Ordem de grandeza por blocos funcionais e métricas paramétricas (R$/m²).</td></tr>
+        <tr><td>12</td><td><strong>Executive Summary</strong></td><td>Síntese executiva de 1 página para tomada de decisão.</td></tr>
+        <tr><td>13</td><td><strong>Entrega Final do Estudo</strong></td><td>Versão final em PDF e Word editável, com referências e fontes utilizadas.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== METODOLOGIA E CRONOGRAMA ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 3</div>
+    <div class="section-title">Metodologia e Cronograma</div>
+
+    <p>A consultoria será executada em <strong>4 fases</strong>, ao longo de 45 dias corridos, com foco em entregáveis técnicos preliminares de viabilidade.</p>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 1 — Dias 1 a 15</div>
+      <div class="phase-title">Pesquisa e Levantamento</div>
+      <table>
+        <thead><tr><th>Atividade</th><th>Entregável</th></tr></thead>
+        <tbody>
+          <tr><td>Briefing executivo com prefeito e secretários</td><td>Relatório de alinhamento institucional</td></tr>
+          <tr><td>Visitas técnicas in loco aos 2 locais indicados</td><td>Painel fotográfico e diagnóstico visual preliminar</td></tr>
+          <tr><td>Mapeamento de potencial de carga (CNAE e comércio exterior)</td><td>Base consolidada para leitura de demanda potencial</td></tr>
+          <tr><td>Benchmarking com Betim, Juiz de Fora e Varginha</td><td>Quadro comparativo técnico com fontes públicas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 2 — Dias 16 a 27</div>
+      <div class="phase-title">Estruturação Técnica</div>
+      <table>
+        <thead><tr><th>Atividade</th><th>Entregável</th></tr></thead>
+        <tbody>
+          <tr><td>Análise regulatória do modelo de Porto Seco</td><td>Checklist técnico com base na IN RFB nº 2.111/2022</td></tr>
+          <tr><td>Esboço conceitual de implantação sobre imagem de satélite</td><td>Croqui funcional preliminar com narrativa técnica</td></tr>
+          <tr><td>Dimensionamento preliminar de infraestrutura</td><td>Matriz conceitual de requisitos físicos e operacionais</td></tr>
+          <tr><td>Estimativa preliminar de CAPEX</td><td>Ordem de grandeza por blocos funcionais (R$/m²)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 3 — Dias 28 a 38</div>
+      <div class="phase-title">Redação e Consolidação</div>
+      <table>
+        <thead><tr><th>Atividade</th><th>Entregável</th></tr></thead>
+        <tbody>
+          <tr><td>Consolidação do diagnóstico logístico regional</td><td>Capítulo de leitura estratégica regional</td></tr>
+          <tr><td>Estrutura Analítica do Projeto (EAP/WBS — Classe 5)</td><td>Estrutura simplificada por blocos funcionais</td></tr>
+          <tr><td>Mapeamento de potenciais fontes de financiamento</td><td>Capítulo de viabilização com opções institucionais</td></tr>
+          <tr><td>Roadmap institucional e Executive Summary</td><td>Roteiro de avanço e síntese executiva de 1 página</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 4 — Dias 39 a 45</div>
+      <div class="phase-title">Finalização</div>
+      <table>
+        <thead><tr><th>Atividade</th><th>Entregável</th></tr></thead>
+        <tbody>
+          <tr><td>Revisão final, padronização e consolidação do estudo</td><td>Versão final validada para decisão institucional</td></tr>
+          <tr><td>Entrega do SVI (PDF e Word editável) com referências</td><td>Pacote final de entrega + reunião de apresentação</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ESCOPO ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 4</div>
+    <div class="section-title">Escopo Detalhado</div>
+
+    <span class="scope-tag in">Incluído no Escopo</span>
+
+    <ul class="check-list">
+      <li>Diagnóstico logístico regional.</li>
+      <li>Mapeamento de potencial de carga (CNAE).</li>
+      <li>Benchmarking com Betim, Juiz de Fora e Varginha (dados públicos e fontes institucionais).</li>
+      <li>Identificação preliminar de áreas candidatas com visitas in loco nos 2 locais sugeridos.</li>
+      <li>Esboço conceitual de implantação com base em imagens de satélite e bases públicas.</li>
+      <li>Dimensionamento preliminar de infraestrutura em nível conceitual (triagem/feasibility).</li>
+      <li>Análise regulatória do modelo de Porto Seco (IN RFB nº 2.111/2022 e normas correlatas).</li>
+      <li>Estrutura Analítica do Projeto (EAP/WBS — Classe 5).</li>
+      <li>Identificação de potenciais fontes de financiamento (BNDES, CAF, BID e correlatos).</li>
+      <li>Roadmap institucional para consulta e eventual licitação junto à Receita Federal.</li>
+      <li>Estimativa preliminar de CAPEX por ordem de grandeza (métricas paramétricas).</li>
+      <li>Executive Summary de 1 página para tomada de decisão.</li>
+      <li>Entrega do estudo em PDF e Word editável, com referências e fontes utilizadas.</li>
+    </ul>
+
+    <hr class="divider">
+
+    <span class="scope-tag out">Fora do Escopo</span>
+
+    <ul class="check-list excluded">
+      <li>Estudo de Viabilidade Técnico-Econômica (EVTE) formal (Art. 9º da IN 2.111/2022).</li>
+      <li>Projeto executivo de arquitetura ou engenharia.</li>
+      <li>Plantas técnicas, projetos estruturais ou detalhamento construtivo.</li>
+      <li>Sondagem de solo, levantamento topográfico ou estudos geotécnicos.</li>
+      <li>Estudo de Impacto Ambiental (EIA/RIMA).</li>
+      <li>Parecer jurídico formalizado.</li>
+      <li>Gestão direta do processo de licitação junto à RFB.</li>
+      <li>Qualquer etapa de construção ou implantação física.</li>
+    </ul>
+
+    <hr class="divider">
+
+    <div class="section-label">Seção 5</div>
+    <div class="section-title" style="font-size: 22px;">Diferenciais desta Consultoria</div>
+
+    <div class="profile-highlights">
+      <div class="profile-highlight">
+        <div class="icon">1</div>
+        <div class="text"><strong>70% da carga horária em pesquisa e análise</strong> — garantindo dados robustos e insights relevantes, não apenas redação.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">2</div>
+        <div class="text"><strong>Uso inteligente de ferramentas acessíveis</strong> (Google Earth, dados públicos, legislação) para otimizar custos sem perder qualidade.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">3</div>
+        <div class="text"><strong>Entrega de valor decisório</strong> — um documento que fundamenta decisões estratégicas e evita investimentos prematuros.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">4</div>
+        <div class="text"><strong>Expertise em EAP/WBS</strong> — a visão de gestão de projetos agrega planejamento claro e previsibilidade às próximas etapas.</div>
+      </div>
+      <div class="profile-highlight">
+        <div class="icon">5</div>
+        <div class="text"><strong>Honestidade técnica</strong> — premissas conservadoras e verificáveis, sem inflar demanda ou retorno para viabilizar decisão política.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== INVESTIMENTO ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 6</div>
+    <div class="section-title">Investimento e Condições</div>
+
+    <div class="investment-box">
+      <div class="amount">R$ 38.000,00</div>
+      <div class="desc">Investimento total para a Síntese de Viabilidade Inicial</div>
+      <div class="rate">Valor global fechado para o escopo proposto em 45 dias corridos.</div>
+    </div>
+
+    <h3>Base de Precificação (Escopo Fechado)</h3>
+    <ul class="check-list">
+      <li>O valor de R$ 38.000,00 foi definido para o escopo fechado desta proposta, conforme entregáveis previstos.</li>
+      <li>Este valor já contempla as visitas in loco previstas neste documento, sem cobrança de reembolso adicional para essas visitas específicas.</li>
+    </ul>
+
+    <h3>Distribuição por fase</h3>
+    <table>
+      <thead>
+        <tr><th>Fase</th><th>Escopo</th><th>Prazo</th><th>Valor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Fase 1</strong></td><td>Pesquisa, diagnóstico e benchmarking</td><td>Dias 1 a 15</td><td>R$ 12.000</td></tr>
+        <tr><td><strong>Fase 2</strong></td><td>Estruturação técnica preliminar</td><td>Dias 16 a 27</td><td>R$ 11.000</td></tr>
+        <tr><td><strong>Fase 3</strong></td><td>Consolidação, EAP/WBS e roadmap</td><td>Dias 28 a 38</td><td>R$ 10.000</td></tr>
+        <tr><td><strong>Fase 4</strong></td><td>Finalização, summary e entrega</td><td>Dias 39 a 45</td><td>R$ 5.000</td></tr>
+        <tr class="table-highlight"><td></td><td><strong>Total</strong></td><td><strong>45 dias</strong></td><td><strong>R$ 38.000</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Serviços Adicionais (Sob Demanda)</h3>
+    <ul class="check-list">
+      <li>Reuniões adicionais e/ou visitas in loco extras, não previstas no escopo, serão cobradas à parte.</li>
+      <li>Valor da consultoria avulsa: R$ 380,00 por hora.</li>
+      <li>A execução de demandas adicionais depende de alinhamento prévio e aprovação formal da contratante.</li>
+    </ul>
+
+    <h3>Forma de Pagamento</h3>
+    <div class="payment-grid">
+      <div class="payment-card">
+        <div class="label">1ª Parcela</div>
+        <div class="value">R$ 19.000</div>
+        <div class="when">Na assinatura do contrato</div>
+      </div>
+      <div class="payment-card">
+        <div class="label">2ª Parcela</div>
+        <div class="value">R$ 19.000</div>
+        <div class="when">Na entrega final do SVI</div>
+      </div>
+    </div>
+
+    <h3>Despesas Reembolsáveis</h3>
+    <ul class="check-list">
+      <li>Deslocamentos, alimentação, hospedagem, passagens, pedágios e estacionamento vinculados a demandas fora do escopo serão tratados a título de reembolso.</li>
+      <li>Reembolso mediante comprovação documental e validação prévia da contratante.</li>
+      <li>Despesas extraordinárias somente com autorização prévia.</li>
+    </ul>
+
+    <h3>Prazo de Execução</h3>
+    <p><strong>45 dias corridos</strong>, contados a partir da assinatura do contrato.</p>
+
+    <hr class="divider">
+
+    <div class="section-label">Cronograma Macro</div>
+    <div class="section-title" style="font-size: 22px;">Visão de Execução</div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot-col"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 1–2 | Dias 1–15</div>
+          <div class="timeline-desc">Briefing executivo, visitas técnicas, pesquisa de demanda e benchmarking.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 3–4 | Dias 16–27</div>
+          <div class="timeline-desc">Análise regulatória, esboço de implantação, estimativa de CAPEX e modelagem financeira.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 5–6 | Dias 28–38</div>
+          <div class="timeline-desc">Redação do diagnóstico, viabilização, EAP/WBS, roadmap e executive summary.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background: var(--gold);"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semana 7 | Dias 39–45</div>
+          <div class="timeline-desc"><strong>Diagramação final, reunião de revisão e entrega do SVI.</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PRÓXIMAS FASES + TERMOS ==================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <span class="page-header-title">Proposta Técnico-Comercial</span>
+      <span class="page-header-logo">ALENCAR SILVA</span>
+    </div>
+
+    <div class="section-label">Seção 7</div>
+    <div class="section-title">Próximas Fases (Serviços Complementares)</div>
+
+    <p>Após a entrega da SVI, recomenda-se o seguinte <strong>sequenciamento de amadurecimento do projeto</strong> — etapas futuras, fora desta proposta:</p>
+    <p class="small" style="margin-top: -4px;">Nota: o <strong>EVTE</strong> (Art. 9º da IN RFB nº 2.111/2022) está contemplado como etapa futura deste sequenciamento.</p>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 1</div>
+      <div class="phase-title">Planejamento e Viabilidade (FEL 1 / ETP)</div>
+      <p class="small"><strong>AACE:</strong> Classe 5. Foco em viabilidade econômica e seleção de alternativas.</p>
+      <p class="small"><strong>TCU:</strong> Estudo Técnico Preliminar (ETP). Define se a solução atende ao interesse público.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 2</div>
+      <div class="phase-title">Estudo de Seleção (FEL 2 / Anteprojeto)</div>
+      <p class="small"><strong>AACE:</strong> Classe 4. Definição da opção técnica escolhida (escopo preliminar).</p>
+      <p class="small"><strong>TCU:</strong> Anteprojeto. Usado em licitações de Contratação Integrada para definir o objeto.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 3</div>
+      <div class="phase-title">Definição e Licitação (FEL 3 / Projeto Básico)</div>
+      <p class="small"><strong>AACE:</strong> Classe 3. Base para autorização de investimento (sanção).</p>
+      <p class="small"><strong>TCU:</strong> Projeto Básico. Nível obrigatório para licitação comum, com precisão para evitar aditivos.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 4</div>
+      <div class="phase-title">Detalhamento Final (Projeto Executivo)</div>
+      <p class="small"><strong>AACE:</strong> Classe 2 / 1. Emissão de documentos para construção e montagem.</p>
+      <p class="small"><strong>TCU:</strong> Projeto Executivo. Detalhamento completo dos elementos necessários ao início da obra.</p>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-tag">Fase 5</div>
+      <div class="phase-title">Execução e Encerramento</div>
+      <p class="small"><strong>AACE:</strong> Controle de custos e medição de desvios.</p>
+      <p class="small"><strong>TCU:</strong> Fiscalização da entrega conforme o edital e documentação As-Built.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section-label">Seção 8</div>
+    <div class="section-title" style="font-size: 22px;">Termos e Condições</div>
+
+    <h3>Vigência</h3>
+    <p>Proposta válida por <strong>30 dias corridos</strong> a partir de 04 de março de 2026.</p>
+
+    <h3>Contrato</h3>
+    <p>Serviços regidos por Contrato de Prestação de Serviços, cujo modelo será fornecido para análise.</p>
+
+    <h3>Confidencialidade</h3>
+    <p>Todos os dados e resultados serão tratados como confidenciais até comunicação pública pela Prefeitura.</p>
+
+    <h3>Propriedade Intelectual</h3>
+    <p>O documento final (SVI) será propriedade exclusiva da Prefeitura de Pedro Leopoldo. A metodologia permanece como propriedade do consultor. Uso como case study sujeito à aprovação prévia.</p>
+
+    <h3>Alterações de Escopo</h3>
+    <p>Escopo fixo para 45 dias corridos e para os entregáveis definidos nesta proposta. Alterações serão formalizadas por aditivo contratual, com eventual renegociação de prazos e valores.</p>
+
+    <h3>Reajuste</h3>
+    <p>Sem reajuste durante o período de execução (prazo fixo de 45 dias).</p>
+
+    <hr class="divider">
+
+    <div class="cta-box">
+      <div class="cta-title">Próximos Passos para Início Imediato</div>
+      <ol class="cta-steps">
+        <li>Assinatura do contrato de prestação de serviços.</li>
+        <li>Pagamento da 1ª parcela (R$ 19.000).</li>
+        <li>Agendamento do briefing executivo (4 horas).</li>
+        <li>Indicação formal dos 2 terrenos candidatos para análise.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTRACAPA ==================== -->
+<div class="page">
+  <div class="backcover">
+    <div class="backcover-name">ALENCAR SILVA</div>
+    <div class="backcover-role">Engenheiro Civil | Global MBA | Gestão de Grandes Projetos &amp; Contratos</div>
+    <div class="backcover-divider"></div>
+    <div class="backcover-contact">
+      +55 31 99615-9460<br>
+      alencarvitor@me.com<br>
+      <a href="https://linkedin.com/in/alencarsilva">linkedin.com/in/alencarsilva</a><br>
+      Nova Lima, MG
+    </div>
+    <div class="backcover-cta">Vamos conversar</div>
+    <div class="backcover-validity">Proposta Técnico-Comercial válida por 30 dias | Versão 1.0 — Março de 2026</div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.content-page').forEach((page, index) => {
+    const footer = document.createElement('div');
+    footer.className = 'page-footer';
+    footer.innerHTML = '<span>linkedin.com/in/alencarsilva</span><span>' + (index + 2) + '</span>';
+    page.appendChild(footer);
+  });
+</script>
+</body>
+</html>
