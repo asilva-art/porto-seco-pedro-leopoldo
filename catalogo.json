@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Proposta Técnico-Comercial — Porto Seco Pedro Leopoldo",
+    "categoria": "profissional/propostas",
+    "slug": "pedro-leopoldo",
+    "tipo": "profissional",
+    "data": "2026-03-06",
+    "link_final": "https://avasconsult.com.br/profissional/propostas/pedro-leopoldo/",
+    "prioridade": "alta"
+  },
+  {
+    "titulo": "Base de Proposta — Cliente X",
+    "categoria": "profissional/propostas",
+    "slug": "cliente-x",
+    "tipo": "profissional",
+    "data": "2026-03-06",
+    "link_final": "https://avasconsult.com.br/profissional/propostas/cliente-x/",
+    "prioridade": "média"
+  }
+]
